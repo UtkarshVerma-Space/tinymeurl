@@ -16,5 +16,5 @@ connectToMongoDB(process.env.mongo_url,)
 app.get("/a" ,(req,res)=>{
     res.redirect("http://google.com")
 })
-
-app.listen(process.env.PORT || 8000)
+const PORT = process.env.PORT
+app.listen(PORT || 8000)
