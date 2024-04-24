@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../success.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<div id="container">
+
+    <nav>
+        <a href="/">
+            <div id="Create">Create</div>
+        </a>
+        <div id="Account">Account</div>
+        <div id="Api">API</div>
+    </nav>
+    
+    <div id="link">
+
+       <a href=<%= link %>><p id="myInput"><%= generatedLink %></p></a>
+        <div id="options">
+            <div class="butt" id="option" onclick="myFunction()"><i class="ri-clipboard-line"></i> Copy</div>
+           <a href="/"><div id="option">/Create New</div></a>
+        </div>
+        
+    </div>
+  <script>
+function myFunction() {
+  // Get the text to copy
+  var copyText = document.querySelector("#myInput").textContent;
+
+  // Copy the text to clipboard
+  navigator.clipboard.writeText(copyText)
+    .then(() => {
+      // Alert the user that the text has been copied
+    })
+    .catch(err => {
+      // Handle errors if any
+    });
+}
+
+var butt = document.querySelector(".butt")
+butt.addEventListener("click",()=>{
+    butt.innerHTML=`<i class="ri-clipboard-line"></i> Link Copied`
+})
+
+  </script>
+</div>
+</body>
+</html>
