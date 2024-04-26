@@ -43,7 +43,7 @@ const handleGenerateNewShortUrl = async (req,res)=>{
         })
     }
  
-    const generatedLink = "localhost:3000/I/"+shortid
+    const generatedLink = "https://meurl.onrender.com/I/"+shortid
     return res.render("success", {generatedLink: generatedLink,"link":"http://"+body.url})
 }
 
